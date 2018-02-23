@@ -13,10 +13,11 @@ function driversByRevenue(driver){
   return driversCopy.sort(function(driver1,driver2){
     return driver1.revenue - driver2.revenue
   })
-  
+
 }
 function driversByName(driver){
-  return driver.sort(function(a,b){
+  const driversCopy= [...driver]
+  return driversCopy.sort(function(a,b){
     if (a.name < b.name) {
     return -1;
   }
