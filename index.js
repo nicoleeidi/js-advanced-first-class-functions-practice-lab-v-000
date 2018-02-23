@@ -23,8 +23,6 @@ function driversByName(driver){
   if (a.name > b.name) {
     return 1;
   }
-
-  // names must be equal
   return 0;
   })
 }
