@@ -13,11 +13,19 @@ function driversByRevenue(driver){
   return driversCopy.sort(function(driver1,driver2){
     return driver1.revenue - driver2.revenue
   })
-
+  
 }
 function driversByName(driver){
   return driver.sort(function(a,b){
-    a.name.localeCompare(b.name)
+    if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+
+  // names must be equal
+  return 0;
   })
 }
 function totalRevenue(driver){
